@@ -14,6 +14,16 @@ public class ReportValidator {
             errors.add(title_error);
         }
 
+        String suppliers_error = _validateTitle(r.getSuppliers());
+        if(!suppliers_error.equals("")) {
+            errors.add(suppliers_error);
+        }
+
+        String situation_error = _validateTitle(r.getSituation());
+        if(!situation_error.equals("")) {
+            errors.add(situation_error);
+        }
+
         String content_error = _validateContent(r.getContent());
         if(!content_error.equals("")) {
             errors.add(content_error);
@@ -25,6 +35,22 @@ public class ReportValidator {
     private static String _validateTitle(String title) {
         if(title == null || title.equals("")) {
             return "タイトルを入力してください。";
+            }
+
+        return "";
+    }
+
+    private static String _validateSuppliers(String suppliers) {
+        if(suppliers == null || suppliers.equals("")) {
+            return "取引先を入力してください。";
+            }
+
+        return "";
+    }
+
+    private static String _validateSituation(String situation) {
+        if(situation == null || situation.equals("")) {
+            return "商談状況てください。";
             }
 
         return "";

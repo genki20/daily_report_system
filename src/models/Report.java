@@ -51,6 +51,12 @@ public class Report {
     @Column(name = "title", length = 255, nullable = false)
     private String title;
 
+    @Column(name = "suppliers", length = 255, nullable = false)
+    private String suppliers;
+
+    @Column(name = "situation", length = 255, nullable = false)
+    private String situation;
+
     @Lob
     @Column(name = "content", nullable = false)
     private String content;
@@ -91,6 +97,22 @@ public class Report {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public String getSuppliers() {
+        return suppliers;
+    }
+
+    public void setSuppliers(String suppliers) {
+        this.suppliers = suppliers;
+    }
+
+    public String getSituation() {
+        return situation;
+    }
+
+    public void setSituation(String situation) {
+        this.situation = situation;
     }
 
     public String getContent() {

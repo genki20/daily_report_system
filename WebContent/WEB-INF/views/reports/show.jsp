@@ -18,6 +18,18 @@
                             <td><fmt:formatDate value="${report.report_date}" pattern="yyyy-MM-dd" /></td>
                         </tr>
                         <tr>
+                            <th>取引先</th>
+                            <td>
+                                <pre><c:out value="${report.suppliers}" /></pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>商談状況</th>
+                            <td>
+                                <pre><c:out value="${report.situation}" /></pre>
+                            </td>
+                        </tr>
+                        <tr>
                             <th>内容</th>
                             <td>
                                 <pre><c:out value="${report.content}" /></pre>

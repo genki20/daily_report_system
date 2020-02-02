@@ -44,6 +44,8 @@ public class ReportsUpdateServlet extends HttpServlet {
 
             r.setReport_date(Date.valueOf(request.getParameter("report_date")));
             r.setTitle(request.getParameter("title"));
+            r.setSuppliers(request.getParameter("suppliers"));
+            r.setSituation(request.getParameter("situation"));
             r.setContent(request.getParameter("content"));
             r.setUpdated_at(new Timestamp(System.currentTimeMillis()));
 

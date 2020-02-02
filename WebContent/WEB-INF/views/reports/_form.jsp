@@ -22,6 +22,14 @@
 <input type="text" name="title" value="${report.title}" />
 <br /><br />
 
+<label for="suppliers">取引先</label><br />
+<input type="text" name="suppliers" value="${report.suppliers}" />
+<br /><br />
+
+<label for="situation">商談状況</label><br />
+<input type="text" name="situation" value="${report.situation}" />
+<br /><br />
+
 <label for="content">内容</label><br />
 <textarea name="content" rows="10" cols="50">${report.content}</textarea>
 <br /><br />
