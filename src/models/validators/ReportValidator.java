@@ -50,7 +50,7 @@ public class ReportValidator {
 
     private static String _validateSituation(String situation) {
         if(situation == null || situation.equals("")) {
-            return "商談状況てください。";
+            return "商談状況を入力してください。";
             }
 
         return "";
