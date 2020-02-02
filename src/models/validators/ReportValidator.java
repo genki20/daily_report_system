@@ -14,12 +14,12 @@ public class ReportValidator {
             errors.add(title_error);
         }
 
-        String suppliers_error = _validateTitle(r.getSuppliers());
+        String suppliers_error = _validateSuppliers(r.getSuppliers());
         if(!suppliers_error.equals("")) {
             errors.add(suppliers_error);
         }
 
-        String situation_error = _validateTitle(r.getSituation());
+        String situation_error = _validateSituation(r.getSituation());
         if(!situation_error.equals("")) {
             errors.add(situation_error);
         }
