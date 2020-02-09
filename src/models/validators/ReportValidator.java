@@ -48,7 +48,7 @@ public class ReportValidator {
         return "";
     }
 
-    private static String _validateSituation(String situation) {
+    private static String _validateSituation(Integer situation) {
         if(situation == null || situation.equals("")) {
             return "商談状況を入力してください。";
             }

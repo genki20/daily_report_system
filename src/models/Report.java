@@ -55,7 +55,7 @@ public class Report {
     private String suppliers;
 
     @Column(name = "situation", length = 255, nullable = false)
-    private String situation;
+    private Integer situation;
 
     @Lob
     @Column(name = "content", nullable = false)
@@ -107,11 +107,11 @@ public class Report {
         this.suppliers = suppliers;
     }
 
-    public String getSituation() {
+    public Integer getSituation() {
         return situation;
     }
 
-    public void setSituation(String situation) {
+    public void setSituation(Integer situation) {
         this.situation = situation;
     }
 

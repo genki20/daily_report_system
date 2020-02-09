@@ -25,8 +25,13 @@
                         </tr>
                         <tr>
                             <th>商談状況</th>
-                            <td>
-                                <pre><c:out value="${report.situation}" /></pre>
+                            <td class="report_situation">
+                                <c:choose>
+                                    <c:when test="${report.situation == 0}">受注</c:when>
+                                    <c:when test="${report.situation == 1}">内示</c:when>
+                                    <c:when test="${report.situation == 2}">商談中</c:when>
+                                    <c:otherwise>失注</c:otherwise>
+                                </c:choose>
                             </td>
                         </tr>
                         <tr>

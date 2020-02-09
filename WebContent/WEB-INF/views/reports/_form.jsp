@@ -27,7 +27,12 @@
 <br /><br />
 
 <label for="situation">商談状況</label><br />
-<input type="text" name="situation" value="${report.situation}" />
+<select name="situation">
+    <option value="0"<c:if test="${report.situation == 0}"> selected</c:if>>受注</option>
+    <option value="1"<c:if test="${report.situation == 1}"> selected</c:if>>内示</option>
+    <option value="2"<c:if test="${report.situation == 2}"> selected</c:if>>商談中</option>
+    <option value="3"<c:if test="${report.situation == 3}"> selected</c:if>>失注</option>
+</select>
 <br /><br />
 
 <label for="content">内容</label><br />

@@ -25,7 +25,14 @@
                         <td class="report_date"><fmt:formatDate value='${report.report_date}' pattern='yyyy-MM-dd' /></td>
                         <td class="report_title">${report.title}</td>
                         <td class="report_suppliers">${report.suppliers}</td>
-                        <td class="report_situation">${report.situation}</td>
+                        <td class="report_situation">
+                            <c:choose>
+                                <c:when test="${report.situation == 0}">受注</c:when>
+                                <c:when test="${report.situation == 1}">内示</c:when>
+                                <c:when test="${report.situation == 2}">商談中</c:when>
+                                <c:otherwise>失注</c:otherwise>
+                            </c:choose>
+                        </td>
                         <td class="report_action"><a href="<c:url value='/reports/show?id=${report.id}' />">詳細を見る</a></td>
                     </tr>
                 </c:forEach>
